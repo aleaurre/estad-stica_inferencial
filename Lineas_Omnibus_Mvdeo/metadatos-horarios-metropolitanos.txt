@@ -1,0 +1,43 @@
+Nombre de Archivo: Horarios_Metropolitanos_DNT.csv
+
+DESCRIPCIÓN: Contiene los datos de los horarios de líneas regulares de ómnibus interdepartamentales
+autorizados por la Dirección Nacional de Transporte (DNT), para servicios Metropolitanos (Atienden Montevideo y Ciudades/localidades de Canelones y San José)
+
+OBSERVACIONES: Estos horarios están en etapa de revisión, por lo que pueden existir pequeñas diferencias
+entre lo publicado y lo realmente realizado, principalmente en las horas de llegada y de pasada por puntos intermedios.
+La Dirección Nacional de Transporte declina toda responsabilidad que pueda recaer por el uso de estos datos por parte de terceros.
+
+ESTRUCTURA:
+El índice de estos datos son {Variante,Turno}.
+Para cada dupla  {Variante,Turno} se detallan los horarios de pasadas por diferentes puntos de cada recorrido.
+
+Atributo - Tipo de Dato - Descripción - Observaciones:
+
+Variante - Numérico (5) - Número identificador de recorrido. Es único para la tupla {Característica,Origen,Destino,Recorrido}, siendo el recorrido en sentido estricto, es decir cualquier diferencia en el recorrido genera una variante distinta.
+Id.Turno - Numérico (6) - Identificador de turno para cada variante.
+Empresa - Caracter(20) - Nombre de la empresa que realiza el servicio.
+Caracteristica - Caracter(5) - Identificador de la línea - Por ej. 4D, 710, 230, 7E7R, etc.
+Origen - Caracter(30) - Lugar de origen de la línea
+Destino - Caracter(30) - Lugar de destino de la línea
+Recorrido - Caracter(80) - Avenidas ó rutas principales del servicio - Separadas por comas (,)
+Dia - Caracter(8) - Tipo de día al que corresponde el servicio - Valores: HABILES, SABADOS, DOMINGOS. Puede repetirse un mismo horario en tipo de días diferentes.
+Modalidad - Caracter(15) - Tipo de servicio en cuanto a régimen de paradas - Valores: CAMINO, SEMI-DIRECTO, DIRECTO, RAPIDO, etc. Si bien estas definiciones están reglamentadas,
+	actualmente los términos utilizados difieren de lo estrictamente dispuesto, estando en etapa de redifiniciones de las mismas.
+Lugar de Pasada - Caracter(30) - Lugar ó localidad de pasada del servicio
+Hora - Caracter(5) - Hora de pasada por lo descripto en el atributo Lugar de Pasada
+F.Inicio - Fecha(10) - Fecha de inicio de validez del servicio - Formato: aa-mm-dd
+F.Fin - - Fecha(10) - Fecha de fin de validez del servicio - Formato: aa-mm-dd
+
+Nombre de Archivo: Horarios_metropolitanos_gtfs.zip
+
+DESCRIPCIÓN: Contiene conjunto de archivos con los horarios de líneas regulares de ómnibus interdepartamentales
+autorizados por la Dirección Nacional de Transporte (DNT), para servicios Metropolitanos (Atienden Montevideo y Ciudades/localidades de Canelones y San José).
+Estos archivos están en el formato estándar GTFS.
+
+OBSERVACIONES: Estos horarios están en etapa de revisión, por lo que pueden existir pequeñas diferencias
+entre lo publicado y lo realmente realizado, principalmente en las horas de llegada y de pasada por puntos intermedios.
+La Dirección Nacional de Transporte declina toda responsabilidad que pueda recaer por el uso de estos datos por parte de terceros.
+
+ESTRUCTURA:
+Formato estándar GTFS.
+
